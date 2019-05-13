@@ -2,18 +2,20 @@
 
 docker image of [cnpmjs.org](https://cnpmjs.org/), the "Company NPM" by alibaba ![nodejs-version-badge](https://img.shields.io/badge/node.js->=_6-blue.svg?style=flat-square) ![cnpmjs.org-version-badge](https://img.shields.io/badge/cnpm-2.19.4-blue.svg?style=flat-square)
 
-https://hub.docker.com/r/hbrls/cnpmjs/
+https://hub.docker.com/r/zuibunan/cnpmjs
 
 # Easy
 
-    $ docker pull hbrls/cnpm:0.0.5
+    $ docker pull zuibunan/cnpmjs
     $ docker run -d \
+                 -e CNPMJS_REPOSITORY=zuibunan/cnpmjs.org \
+                 -e CNPMJS_ORG_VERSION=3.0.0-rc.21 \
                  -p 7001:7001 \
                  -p 7002:7002 \
                  -v /path/to/config:/var/app/cnpmjs.org/config \
                  -v /path/to/customize/README.md:/var/app/cnpmjs.org/docs/web/readme.md \
                  -v /path/to/storage:/var/www \
-                 --name cnpm hbrls/cnpm:0.0.5
+                 --name cnpm zuibunan/cnpmjs
 
 # Reference
 
