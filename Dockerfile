@@ -3,6 +3,7 @@ FROM node:6.10.2-slim
 
 # Working enviroment
 ENV APPDIR /var/app/cnpmjs.org
+ENV CNPMJS_REPOSITORY cnpm/cnpmjs.org
 ENV CNPMJS_ORG_VERSION 2.19.4
 
 RUN \
@@ -13,7 +14,7 @@ RUN \
 USER www-data
 
 RUN \
-  wget -P /tmp https://github.com/cnpm/cnpmjs.org/archive/${CNPMJS_ORG_VERSION}.tar.gz && \
+  wget -P /tmp https://github.com/${CNPMJS_REPOSITORY}/archive/${CNPMJS_ORG_VERSION}.tar.gz && \
   tar xvzf /tmp/${CNPMJS_ORG_VERSION}.tar.gz -C /var/app && \
   mv /var/app/cnpmjs.org-${CNPMJS_ORG_VERSION} ${APPDIR}
 
