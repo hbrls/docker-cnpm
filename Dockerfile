@@ -3,8 +3,8 @@ FROM node:6.10.2-slim
 
 # Working enviroment
 ENV APPDIR /var/app/cnpmjs.org
-ENV CNPMJS_REPOSITORY cnpm/cnpmjs.org
-ENV CNPMJS_ORG_VERSION 2.19.4
+ENV CNPMJS_REPOSITORY zuibunan/cnpmjs.org
+ENV CNPMJS_ORG_VERSION 3.0.0-rc.21
 
 RUN \
   mkdir /var/app && \

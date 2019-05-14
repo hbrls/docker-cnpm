@@ -8,8 +8,6 @@ https://hub.docker.com/r/zuibunan/cnpmjs
 
     $ docker pull zuibunan/cnpmjs
     $ docker run -d \
-                 -e CNPMJS_REPOSITORY=zuibunan/cnpmjs.org \
-                 -e CNPMJS_ORG_VERSION=3.0.0-rc.21 \
                  -p 7001:7001 \
                  -p 7002:7002 \
                  -v /path/to/config:/var/app/cnpmjs.org/config \
